@@ -117,15 +117,17 @@
         <DCCReference Include="src\Clap.AudioBuffer.pas"/>
         <DCCReference Include="src\Clap.Color.pas"/>
         <DCCReference Include="src\Clap.Entry.pas"/>
+        <DCCReference Include="src\Clap.Events.pas"/>
+        <DCCReference Include="src\Clap.Fixedpoint.pas"/>
         <DCCReference Include="src\Clap.Host.pas"/>
         <DCCReference Include="src\Clap.Id.pas"/>
+        <DCCReference Include="src\Clap.Plugin.pas"/>
         <DCCReference Include="src\Clap.PluginFeatures.pas"/>
+        <DCCReference Include="src\Clap.Process.pas"/>
         <DCCReference Include="src\Clap.StringSizes.pas"/>
         <DCCReference Include="src\Clap.Timestamp.pas"/>
         <DCCReference Include="src\Clap.UniversalPluginId.pas"/>
         <DCCReference Include="src\Clap.Version.pas"/>
-        <DCCReference Include="src\Clap.Fixedpoint.pas"/>
-        <DCCReference Include="src\OOClap.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

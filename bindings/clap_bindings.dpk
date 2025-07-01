@@ -34,14 +34,16 @@ contains
   Clap.AudioBuffer in 'src\Clap.AudioBuffer.pas',
   Clap.Color in 'src\Clap.Color.pas',
   Clap.Entry in 'src\Clap.Entry.pas',
+  Clap.Events in 'src\Clap.Events.pas',
+  Clap.Fixedpoint in 'src\Clap.Fixedpoint.pas',
   Clap.Host in 'src\Clap.Host.pas',
   Clap.Id in 'src\Clap.Id.pas',
+  Clap.Plugin in 'src\Clap.Plugin.pas',
   Clap.PluginFeatures in 'src\Clap.PluginFeatures.pas',
+  Clap.Process in 'src\Clap.Process.pas',
   Clap.StringSizes in 'src\Clap.StringSizes.pas',
   Clap.Timestamp in 'src\Clap.Timestamp.pas',
   Clap.UniversalPluginId in 'src\Clap.UniversalPluginId.pas',
-  Clap.Version in 'src\Clap.Version.pas',
-  Clap.Fixedpoint in 'src\Clap.Fixedpoint.pas',
-  OOClap in 'src\OOClap.pas';
+  Clap.Version in 'src\Clap.Version.pas';
 
 end.

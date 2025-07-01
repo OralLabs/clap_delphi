@@ -361,7 +361,7 @@ TClapInputEvents    =   packed record
     procSize    :   function(const list: PClapInputEvents): uint32; cdecl;
 
     // Don't free the returned event, it belongs to the list
-    procGet     :   function(const list: PClapInputEvents; const &index: uint32): PClapEventHeader;
+    procGet     :   function(const list: PClapInputEvents; const &index: uint32): PClapEventHeader; cdecl;
 end;
 
 // Output event list. The plugin must insert events in sample sorted order when inserting events
@@ -371,7 +371,7 @@ TClapOutputEvents   =   packed record
 
     // Pushes a copy of the event
     // returns false if the event could not be pushed to the queue (out of memory?)
-    procTryPush :   function(const list: PClapOutputEvents; const event: PClapEventHeader): boolean;
+    procTryPush :   function(const list: PClapOutputEvents; const event: PClapEventHeader): boolean; cdecl;
 end;
 
 
