@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E3C36065-0F6B-4F12-A9B8-81FDC18C60C2}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="example\example.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="bindings\clap_bindings.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="example">
+        <MSBuild Projects="example\example.dproj"/>
+    </Target>
+    <Target Name="example:Clean">
+        <MSBuild Projects="example\example.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="example:Make">
+        <MSBuild Projects="example\example.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="clap_bindings">
+        <MSBuild Projects="bindings\clap_bindings.dproj"/>
+    </Target>
+    <Target Name="clap_bindings:Clean">
+        <MSBuild Projects="bindings\clap_bindings.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="clap_bindings:Make">
+        <MSBuild Projects="bindings\clap_bindings.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="example;clap_bindings"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="example:Clean;clap_bindings:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="example:Make;clap_bindings:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,47 @@
+﻿package clap_bindings;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl;
+
+contains
+  Clap.AudioBuffer in 'src\Clap.AudioBuffer.pas',
+  Clap.Color in 'src\Clap.Color.pas',
+  Clap.Entry in 'src\Clap.Entry.pas',
+  Clap.Host in 'src\Clap.Host.pas',
+  Clap.Id in 'src\Clap.Id.pas',
+  Clap.PluginFeatures in 'src\Clap.PluginFeatures.pas',
+  Clap.StringSizes in 'src\Clap.StringSizes.pas',
+  Clap.Timestamp in 'src\Clap.Timestamp.pas',
+  Clap.UniversalPluginId in 'src\Clap.UniversalPluginId.pas',
+  Clap.Version in 'src\Clap.Version.pas',
+  Clap.Fixedpoint in 'src\Clap.Fixedpoint.pas',
+  OOClap in 'src\OOClap.pas';
+
+end.
