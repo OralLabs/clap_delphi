@@ -29,13 +29,14 @@ PDoubleArray    = ^PDouble;
 //
 // The constant mask is a hint.
 type 
-TClapAudioBuffer    =   packed record
+PClapAudioBuffer     =  ^TClapAudioBuffer;
+TClapAudioBuffer     =  packed record
    // Either data32 or data64 pointer will be set.
-   data32       :   PSingleArray;
-   data64       :   PDoubleArray;
-   channelCount :   uint32;
-   latency      :   uint32; // latency from/to the audio interface
-   constantMask :   uint32;
+   data32         :  PSingleArray;
+   data64         :  PDoubleArray;
+   channelCount   :  uint32;
+   latency        :  uint32;  // latency from/to the audio interface
+   constantMask   :  uint32;
 end;
 
 implementation
