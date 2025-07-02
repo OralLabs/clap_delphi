@@ -1,3 +1,4 @@
+{ FROM "plugin.h" }
 unit Clap.Plugin;
 
 {$MINENUMSIZE 4}
