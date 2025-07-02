@@ -3,10 +3,10 @@
         <ProjectGuid>{E3C36065-0F6B-4F12-A9B8-81FDC18C60C2}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="example\example.dproj">
+        <Projects Include="bindings\clap_bindings.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="bindings\clap_bindings.dproj">
+        <Projects Include="example\example.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -17,15 +17,6 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="example">
-        <MSBuild Projects="example\example.dproj"/>
-    </Target>
-    <Target Name="example:Clean">
-        <MSBuild Projects="example\example.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="example:Make">
-        <MSBuild Projects="example\example.dproj" Targets="Make"/>
-    </Target>
     <Target Name="clap_bindings">
         <MSBuild Projects="bindings\clap_bindings.dproj"/>
     </Target>
@@ -35,14 +26,23 @@
     <Target Name="clap_bindings:Make">
         <MSBuild Projects="bindings\clap_bindings.dproj" Targets="Make"/>
     </Target>
+    <Target Name="example">
+        <MSBuild Projects="example\example.dproj"/>
+    </Target>
+    <Target Name="example:Clean">
+        <MSBuild Projects="example\example.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="example:Make">
+        <MSBuild Projects="example\example.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="example;clap_bindings"/>
+        <CallTarget Targets="clap_bindings;example"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="example:Clean;clap_bindings:Clean"/>
+        <CallTarget Targets="clap_bindings:Clean;example:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="example:Make;clap_bindings:Make"/>
+        <CallTarget Targets="clap_bindings:Make;example:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

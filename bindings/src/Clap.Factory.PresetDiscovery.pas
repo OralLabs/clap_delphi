@@ -94,7 +94,7 @@ TClapPresetDiscoveryFlags   =   (
 // would then call them.
 //
 // This interface isn't thread-safe.
-PClapPresetDiscoveryMetadataReceiver    =   ^ClapPresetDiscoveryMetadataReceiver;
+PClapPresetDiscoveryMetadataReceiver    =   ^TClapPresetDiscoveryMetadataReceiver;
 TClapPresetDiscoveryMetadataReceiver    =   packed record
     receiverData        :   Pointer;    // reserved pointer for the metadata receiver   //TODO
 

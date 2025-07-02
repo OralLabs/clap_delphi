@@ -118,12 +118,17 @@
         <DCCReference Include="src\Clap.Color.pas"/>
         <DCCReference Include="src\Clap.Entry.pas"/>
         <DCCReference Include="src\Clap.Events.pas"/>
+        <DCCReference Include="src\Clap.Factory.PluginFactory.pas"/>
+        <DCCReference Include="src\Clap.Factory.PluginInvalidation.pas"/>
+        <DCCReference Include="src\Clap.Factory.PluginStateConverter.pas"/>
+        <DCCReference Include="src\Clap.Factory.PresetDiscovery.pas"/>
         <DCCReference Include="src\Clap.Fixedpoint.pas"/>
         <DCCReference Include="src\Clap.Host.pas"/>
         <DCCReference Include="src\Clap.Id.pas"/>
         <DCCReference Include="src\Clap.Plugin.pas"/>
         <DCCReference Include="src\Clap.PluginFeatures.pas"/>
         <DCCReference Include="src\Clap.Process.pas"/>
+        <DCCReference Include="src\Clap.Stream.pas"/>
         <DCCReference Include="src\Clap.StringSizes.pas"/>
         <DCCReference Include="src\Clap.Timestamp.pas"/>
         <DCCReference Include="src\Clap.UniversalPluginId.pas"/>
